@@ -1,0 +1,232 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="mainApp">
+  <head>
+	 <meta charset="utf-8" />
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	 <title>Cost This!</title>
+	 <link rel="stylesheet" href="css/foundation.css" />
+	 <link rel="stylesheet" href="css/base.css" />
+	 <script src="js/vendor/modernizr.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-animate.min.js"></script>
+  </head>
+  <body ng-controller="MainController">
+	 
+	 <div class="row">
+	 	<div class="large-12 columns header">
+	 		<img src="images/logo.png" width="300">
+	 	</div>
+	 </div>
+	 <div class="row">
+		<div class="large-12 columns">
+		  
+		<h1><div class="logo dollar"></div><strong>What does it cost to build a website/Facebook/app?</strong></h1>
+		  <!-- <h6>Cost is for <strong>development</strong> only, excluding copywriting, creative concept, design and layout.<em></em></h6> -->
+		  <hr/>
+		</div>
+	 </div>
+
+	 <br/>
+
+	 <div class="row">
+		<div class="large-8 medium-8 columns">
+
+			<h4>Creative Concept</h4>
+		  <h6><em>Direct concept adaptation of the print material or will require a new creative concept?</em></h6>
+			<div class="row button-group">
+				<!-- <div class="large-4 small-4 columns"><a ng-click="newconcept=false; refreshCost();" class="button " ng-class="{'active':newconcept==false}">
+				<div class="svg-image printidea"></div>Adaptation of Existing Creatives</a>
+				</div> -->
+				<div class="large-4 small-4 columns"><a ng-click="newconcept=false; refreshCost();" class="button " ng-class="{'active':newconcept==false}">
+				<div class="svg-image printidea"></div>Adaptation of Existing Creatives</a>
+				</div>
+				<div class="large-4 small-4 columns"><a ng-click="newconcept=true; refreshCost();" class="button " ng-class="{'active':newconcept==true}">
+				<div class="svg-image newidea"></div>New Creative Concept</a>
+				</div>
+			</div>
+
+<br/><br/>
+			
+		  <h4>Select the number of screens: <strong><span id="sliderOutput1"></span></strong></h4>
+		  <h6>A screen is counted as a different layout</h6>
+		  <div id="slider1" class="range-slider radius" data-slider data-options="display_selector: #sliderOutput1; start: 1; end: 90;">
+			 <span class="range-slider-handle"></span>
+			 <span class="range-slider-active-segment"></span>
+			 <input type="hidden">
+		  </div>
+
+		  <h4>Complexity of Screens</h4>
+		  <h6><em>Basic screen have little or no change from existing material. Advanced screen will need graphics creation (eg. redrawing of graphs, pie chart, diagrams, etc.)</em></h6>
+
+		  <div class="row button-group">
+		  	<div class="large-4 medium-4 small-6 columns"><a ng-click="complexity=1; refreshCost();" class="button " ng-class="{'active':complexity==1}">
+		  	<div class="svg-image basic"></div>Mostly basic screen</a>
+		  	</div>
+		  	<div class="large-4 medium-4 small-6 columns"><a ng-click="complexity=2; refreshCost();" class="button " ng-class="{'active':complexity==2}">
+		  	<div class="svg-image mix"></div>Mix of both screen types</a>
+		  	</div>
+		  	<div class="large-4 medium-4 small-6 columns"><a ng-click="complexity=3; refreshCost();" class="button " ng-class="{'active':complexity==3}">
+		  	<div class="svg-image advance"></div>Mostly advanced screen</a>
+		  	</div>
+		  </div>
+
+<br/><hr/>
+		  <!-- <h3>Technical Development</h3> -->
+		  <h4>Choose the platform</h4>
+		  <h6><em>You can choose more than one</em></h6>
+		  <div class="row button-group">
+			  <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['iphone']=!feature_selected['iphone']; refreshCost();" class="button" ng-class="{'active':feature_selected['iphone']==true}">
+			  <div class="svg-image apple"></div>iPhone</a>
+			  </div>
+			  <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['ipad']=!feature_selected['ipad']; refreshCost();" class="button" ng-class="{'active':feature_selected['ipad']==true}">
+			  <div class="svg-image apple"></div>iPad</a>
+			  </div>
+			  <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['android']=!feature_selected['android']; refreshCost();" class="button" ng-class="{'active':feature_selected['android']==true}"><div class="svg-image android"></div>Android Phone</a>
+			  </div>
+			  <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['androidtab']=!feature_selected['androidtab']; refreshCost();" class="button" ng-class="{'active':feature_selected['androidtab']==true}"><div class="svg-image android"></div>Android Tablet</a>
+			  </div>
+			  <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['irep']=!feature_selected['irep']; refreshCost();" class="button" ng-class="{'active':feature_selected['irep']==true}">
+			  <div class="svg-image irep"></div>iRep/Veeva</a>
+			  </div>
+		  </div>
+
+		  <br/>
+
+
+
+		  <!-- <h5>Number of animated screen: <span id="sliderOutput2"></span></h5>
+		  <div id="slider2" class="range-slider radius" data-slider data-options="display_selector: #sliderOutput2; start: 0; end: 50;">
+			 <span class="range-slider-handle"></span>
+			 <span class="range-slider-active-segment"></span>
+			 <input type="hidden">
+		  </div> -->
+
+
+
+		  <br/><br/>
+		  <h4>App Features</h4>
+		  <!-- Grid Example -->
+
+
+		  <div class="row button-group">
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['custom_ui']=!feature_selected['custom_ui']; refreshCost();" class="button" ng-class="{'active':feature_selected['custom_ui']==true}">
+			 <div class="svg-image customui"></div>Customised Layout UI</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['login_email']=!feature_selected['login_email']; refreshCost();" class="button" ng-class="{'active':feature_selected['login_email']==true}"><div class="svg-image email"></div>Email Login</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['login_social']=!feature_selected['login_social']; refreshCost();" class="button" ng-class="{'active':feature_selected['login_social']==true}"><div class="svg-image socialog"></div>Social Login</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['pdfpopup']=!feature_selected['pdfpopup']; refreshCost();" class="button" ng-class="{'active':feature_selected['pdfpopup']==true}"><div class="svg-image pdf"></div>PDF popup &amp; Email</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['userprofile']=!feature_selected['userprofile']; refreshCost();" class="button" ng-class="{'active':feature_selected['userprofile']==true}"><div class="svg-image userprofile"></div>User Profile</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['pushno']=!feature_selected['pushno']; refreshCost();" class="button" ng-class="{'active':feature_selected['pushno']==true}"><div class="svg-image push"></div>Push Notification</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['message']=!feature_selected['message']; refreshCost();" class="button" ng-class="{'active':feature_selected['message']==true}"><div class="svg-image message"></div>In-App Messaging</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['share']=!feature_selected['share']; refreshCost();" class="button" ng-class="{'active':feature_selected['share']==true}"><div class="svg-image share"></div>Social Sharing</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['armarker']=!feature_selected['armarker']; refreshCost();" class="button" ng-class="{'active':feature_selected['armarker']==true}"><div class="svg-image armarker"></div>Augmented Reality Marker</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['qrcode']=!feature_selected['qrcode']; refreshCost();" class="button" ng-class="{'active':feature_selected['qrcode']==true}"><div class="svg-image qrcode"></div>QR Code Detection</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['drseg']=!feature_selected['drseg']; refreshCost();" class="button" ng-class="{'active':feature_selected['drseg']==true}"><div class="svg-image drseg"></div>Doctor Segmentation</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['3dmodel']=!feature_selected['3dmodel']; refreshCost();" class="button" ng-class="{'active':feature_selected['3dmodel']==true}"><div class="svg-image t3dmod"></div>3d Model</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['3danim']=!feature_selected['3danim']; refreshCost();" class="button" ng-class="{'active':feature_selected['3danim']==true}"><div class="svg-image t3danim"></div>3d Animation</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['analytic']=!feature_selected['analytic']; refreshCost();" class="button" ng-class="{'active':feature_selected['analytic']==true}"><div class="svg-image analytic"></div>Analytics</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['geomap']=!feature_selected['geomap']; refreshCost();" class="button" ng-class="{'active':feature_selected['geomap']==true}"><div class="svg-image maps"></div>Maps &amp; Geolocation</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['gallery']=!feature_selected['gallery']; refreshCost();" class="button" ng-class="{'active':feature_selected['gallery']==true}"><div class="svg-image gallery"></div>Photos / Video Gallery</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['audio']=!feature_selected['audio']; refreshCost();" class="button" ng-class="{'active':feature_selected['audio']==true}"><div class="svg-image audio"></div>Audio / Music</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['3rdparty']=!feature_selected['3rdparty']; refreshCost();" class="button" ng-class="{'active':feature_selected['3rdparty']==true}"><div class="svg-image api"></div>3rd Party API integration</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['survey']=!feature_selected['survey']; refreshCost();" class="button" ng-class="{'active':feature_selected['survey']==true}"><div class="svg-image survey"></div>Survey</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['quiz']=!feature_selected['quiz']; refreshCost();" class="button" ng-class="{'active':feature_selected['quiz']==true}"><div class="svg-image quiz"></div>Quiz</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['stencil']=!feature_selected['stencil']; refreshCost();" class="button" ng-class="{'active':feature_selected['stencil']==true}"><div class="svg-image stencil"></div>Stencil</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['game']=!feature_selected['game']; refreshCost();" class="button" ng-class="{'active':feature_selected['game']==true}"><div class="svg-image games"></div>Mini Game</a>
+			 </div>
+		  </div>
+
+
+		  <h4>Admin Features</h4>
+		  <div class="row button-group">
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['deploy_internal']=!feature_selected['deploy_internal']; refreshCost();" class="button" ng-class="{'active':feature_selected['deploy_internal']==true}"><div class="svg-image deploy"></div>App Deployment</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['usermg']=!feature_selected['usermg']; refreshCost();" class="button" ng-class="{'active':feature_selected['usermg']==true}"><div class="svg-image usermg"></div>User management</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['datacoll']=!feature_selected['datacoll']; refreshCost();" class="button" ng-class="{'active':feature_selected['datacoll']==true}"><div class="svg-image datacoll"></div>Data collection</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['cms']=!feature_selected['cms']; refreshCost();" class="button" ng-class="{'active':feature_selected['cms']==true}"><div class="svg-image cms"></div>Content Management System</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['datasync']=!feature_selected['datasync']; refreshCost();" class="button" ng-class="{'active':feature_selected['datasync']==true}"><div class="svg-image sync"></div>Data syncing on server</a>
+			 </div>
+			 <div class="large-3 medium-4 small-6 columns"><a ng-click="feature_selected['dashboard']=!feature_selected['dashboard']; refreshCost();" class="button" ng-class="{'active':feature_selected['dashboard']==true}"><div class="svg-image dashboard"></div>Dashboard</a>
+			 </div>
+			 
+		  </div>
+
+		  
+
+
+		</div>     
+
+		<div class="large-4 medium-4 columns sidebar">
+		  <h4>Feature set</h4>
+		  <div class="overview">
+			<div class="panel">
+				<!-- <h5><strong>Base cost</strong></h5> -->
+				<div class="row" ng-repeat="item in basiccart">
+					<div class="large-8 small-8 columns">{{item.desc}}</div>
+					<div class="large-4 small-3 columns rightalign">${{item.cost | number}}</div>
+				</div> 
+
+				<div class="row" ng-repeat="item in featurecart">
+					<div class="large-8 small-8 columns">{{item.desc}}</div>
+					<div class="large-4 small-3 columns rightalign">${{item.cost | number}}</div>
+				</div>            
+		  </div>   
+			<div class="row">
+				<div class="large-8 small-8 columns"><h6>Person-days</h6></div>
+				<div class="large-4 small-3 columns rightalign"><h6>{{totalhours | number}}</h6></div>
+			</div>
+			<div class="row">
+				<div class="large-8 small-8 columns"><h6>Personnel</h6></div>
+				<div class="large-4 small-3 columns rightalign"><h6>{{ personnel }}</h6></div>
+			</div>
+		  <hr/> 
+			<div class="row">
+				<div class="large-8 medium-6 small-6 columns"><h4><strong>Total</strong></h4></div>
+				<div class="large-4 medium-6 small-6 columns rightalign"><h4><strong>${{totalcost | number}}</strong></h4></div>
+			</div>
+		  
+
+			<hr/> 
+
+		  <div class="row">
+		  	<p class="large-12 small-12 columns"><em><strong>Caveat:</strong> Cost are for estimates only. Use at your own discretion. Please check with Creative Director and Digital Lead for confirmation.</em></p>
+		  </div>
+
+
+		</div>
+		</div>
+	 </div>
+
+	 
+	 <script src="js/vendor/jquery.js"></script>
+	 <script src="js/foundation.min.js"></script>
+  	<script src="js/foundation/foundation.slider.js"></script>
+	 <script src="js/main.js"></script>
+	 <script>
+		$(document).foundation();
+	 </script>
+  </body>
+</html>

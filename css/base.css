@@ -1,0 +1,354 @@
+/* ############## !BASE ############## */
+
+/*
+html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+font-family: 'Ubuntu', sans-serif;
+
+
+*/
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+html, body {
+	line-height: 1;
+	min-height:100%;
+	/*height:100%;*/
+	font-family:Arial, Verdana, sans-serif;
+}
+h1 {
+	font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+}
+h6, p {
+	color: #aaa;
+}
+p {
+	font-size: 0.8rem;
+}
+ol, ul {
+	list-style: none;
+}
+
+
+a, a:link, a:visited, a:hover, a:active {
+	color: #00f;
+}
+em {
+	font-style: italic;
+}
+
+
+/* reset */
+textarea:focus, input:focus{
+	outline: 0;
+}
+
+/* reset */
+
+
+/* ############## !COLORS ############## */
+body {
+	/*background: #0058B2;*/
+}
+h1, h4 {
+	color: #bc3233;
+}
+h6 {
+	color: #869499;
+}
+/* ############## !LAYOUT ############## */
+
+.sectionContent {
+	width:100%;
+	z-index: 100;
+	position: absolute;
+	text-align: center;
+	overflow:hidden;
+}
+.innerSection {
+	width:100%;
+	margin:0 auto;
+	position: relative;
+}
+
+
+
+
+
+.button {
+	transition:none;
+	background: #aaa;
+	width: 150px;
+	height: 150px;
+}
+.button:hover {
+	transition:none;
+}
+.button.active {
+	background-color:#008cba;
+}
+.button-group .large-3.columns {
+	float: left;
+}
+.sidebar .row {
+	margin-bottom: 0.4em;
+}
+.button.large {
+	width: 300px;
+}
+/* ############## !STYLES ############## */
+
+.sidebar {
+	position: fixed;
+	right:0;
+	top:230px;
+	bottom:0;
+	overflow: auto;
+}
+.overview {
+}
+.rightalign {
+	text-align: right;
+}
+.logo {
+	width: 60px;
+	height: 60px;
+	margin:0 auto;
+	display: inline-block;
+	text-indent: -9999px;
+	/*margin-top: 10px;*/
+	margin-right: 10px;
+}
+.header {
+	text-align:center;
+	margin-top: 10px;	
+}
+.dollar {
+	background:url(../images/dollar1.svg) no-repeat top center;
+	background-size: contain;
+}
+
+@media only screen and (max-width: 40.063em) {
+	h1 {
+		font-size: 1.725rem;
+		text-align: center;
+	}
+	.logo {
+		width: 40px;
+		height: 40px;
+		margin:10px auto 0;
+		display: block;
+	}
+	.button{
+		font-size: .9rem;
+		width: 120px;
+		height: 120px;
+		padding: .8rem .8rem 1rem;
+	}
+	.button.large {
+		font-size: .9rem;
+		padding: .8rem .8rem 1rem;
+		width: 120px;
+		height: 140px;
+	}
+	.sidebar {
+		top:50px;
+		position: relative;
+	}
+	.button-group .small-6 {
+		float:left !important;
+	}
+
+}
+
+
+/* ############## !SVG ICONS ############## */
+
+.svg-image {
+	width: 50px;
+	height: 50px;
+	margin:0 auto;
+	display: block;
+	text-indent: -9999px;
+	margin-bottom: 10px;
+}
+.printidea {
+	background:url(../images/brochure2.svg) no-repeat top center;
+	background-size: contain;
+}
+.basic {
+	width: 60px;
+	height: 60px;
+	background:url(../images/page69.svg) no-repeat top center;
+	background-size: contain;
+}
+.advance {
+	width: 60px;
+	height: 60px;
+	background:url(../images/page68.svg) no-repeat top center;
+	background-size: contain;
+}
+.mix {
+	width: 60px;
+	height: 60px;
+	background:url(../images/minus45.svg) no-repeat top center;
+	background-size: contain;
+}
+.newidea {
+	width: 60px;
+	height: 60px;
+	background:url(../images/idea.svg) no-repeat top center;
+	background-size: contain;
+}
+.apple {
+	background:url(../images/apple19.svg) no-repeat top center;
+	background-size: contain;
+}
+.irep {
+	background:url(../images/html2.svg) no-repeat top center;
+	background-size: contain;
+}
+.android {
+	background:url(../images/android3.svg) no-repeat top center;
+	background-size: contain;
+}
+.android {
+	background:url(../images/android3.svg) no-repeat top center;
+	background-size: contain;
+}
+.customui {
+	background:url(../images/square81.svg) no-repeat top center;
+	background-size: contain;
+}
+.email {
+	background:url(../images/email7.svg) no-repeat top center;
+	background-size: contain;
+}
+.socialog {
+	background:url(../images/facebook24.svg) no-repeat top center;
+	background-size: contain;
+}
+.pdf {
+	background:url(../images/pdf18.svg) no-repeat top center;
+	background-size: contain;
+}
+.userprofile {
+	background:url(../images/user74.svg) no-repeat top center;
+	background-size: contain;
+}
+.push {
+	background:url(../images/download21.svg) no-repeat top center;
+	background-size: contain;
+}
+.message {
+	background:url(../images/rectangular45.svg) no-repeat top center;
+	background-size: contain;
+}
+.share {
+	background:url(../images/share12.svg) no-repeat top center;
+	background-size: contain;
+}
+.armarker {
+	background:url(../images/focusing2.svg) no-repeat top center;
+	background-size: contain;
+}
+.qrcode {
+	background:url(../images/blackberry3.svg) no-repeat top center;
+	background-size: contain;
+}
+.drseg {
+	background:url(../images/man85.svg) no-repeat top center;
+	background-size: contain;
+}
+.t3dmod {
+	background:url(../images/cube18.svg) no-repeat top center;
+	background-size: contain;
+}
+.t3danim {
+	background:url(../images/3d62.svg) no-repeat top center;
+	background-size: contain;
+}
+.analytic {
+	background:url(../images/ascendant6.svg) no-repeat top center;
+	background-size: contain;
+}
+.maps {
+	background:url(../images/location27.svg) no-repeat top center;
+	background-size: contain;
+}
+.gallery {
+	background:url(../images/picture11.svg) no-repeat top center;
+	background-size: contain;
+}
+.maps {
+	background:url(../images/location27.svg) no-repeat top center;
+	background-size: contain;
+}
+.gallery {
+	background:url(../images/picture11.svg) no-repeat top center;
+	background-size: contain;
+}
+.audio {
+	background:url(../images/song1.svg) no-repeat top center;
+	background-size: contain;
+}
+.api {
+	background:url(../images/power25.svg) no-repeat top center;
+	background-size: contain;
+}
+.survey {
+	background:url(../images/verification5.svg) no-repeat top center;
+	background-size: contain;
+}
+.quiz {
+	background:url(../images/education31.svg) no-repeat top center;
+	background-size: contain;
+}
+.stencil {
+	background:url(../images/pencil11.svg) no-repeat top center;
+	background-size: contain;
+}
+.games {
+	background:url(../images/pac.svg) no-repeat top center;
+	background-size: contain;
+}
+.deploy {
+	background:url(../images/delivered.svg) no-repeat top center;
+	background-size: contain;
+}
+.usermg {
+	background:url(../images/multiple25.svg) no-repeat top center;
+	background-size: contain;
+}
+.datacoll {
+	background:url(../images/money.svg) no-repeat top center;
+	background-size: contain;
+}
+.cms {
+	background:url(../images/flow2.svg) no-repeat top center;
+	background-size: contain;
+}
+.sync {
+	background:url(../images/cloud130.svg) no-repeat top center;
+	background-size: contain;
+}
+.dashboard {
+	background:url(../images/seo1.svg) no-repeat top center;
+	background-size: contain;
+}

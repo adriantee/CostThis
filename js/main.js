@@ -36,6 +36,7 @@ angular.module('mainApp', ['ui.bootstrap-slider'])
 
 			$scope.totalhours = 0;
 			$scope.totalcost = 0;
+			$scope.updateMultiplier = 0.5;
 			$scope.basicPageHourCost = 0.5; // 1 page takes how many hours to create
 			
 			// get settings
@@ -56,7 +57,10 @@ angular.module('mainApp', ['ui.bootstrap-slider'])
 				}
 				// console.log($scope.featurecart);
 
+				$scope.refreshCost();
+
 				$scope.$apply();
+
 
 			}).error(function(data){
 				console.warn("error");				
@@ -73,6 +77,7 @@ angular.module('mainApp', ['ui.bootstrap-slider'])
 				$scope.basehours = $scope.project_type[$scope.selected.project].base_hours;
 				$scope.pagehours = $scope.basicPageHourCost * ($scope.numPages + ($scope.numRefPages * 0.5));
 				$scope.costmultiplier = $scope.platform_type[$scope.selected.platform].multiplier;
+				if(!$scope.newProject) { $scope.costmultiplier *= $scope.updateMultiplier; }
 				$scope.feathours = 0;
 
 				for(var i in $scope.featurecart){
@@ -99,6 +104,8 @@ angular.module('mainApp', ['ui.bootstrap-slider'])
 				$scope.totalhours = ($scope.basehours + $scope.pagehours + $scope.feathours) * $scope.costmultiplier;
 				$scope.totalcost = $scope.totalhours * $scope.hourRate;
 				console.log("hours",Math.ceil($scope.totalhours) , "cost", $scope.totalcost);
+
+
 			}
 			$scope.toggleFeature = function(n){
 				$scope.featurecart[n].selected=!$scope.featurecart[n].selected;

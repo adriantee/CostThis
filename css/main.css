@@ -1,24 +1,5 @@
 /* ############## !BASE ############## */
 
-/*
-html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-
-
-font-family: 'Ubuntu', sans-serif;
-
-
-*/
 
 @font-face {
   font-family: 'Ubuntu';
@@ -124,32 +105,41 @@ h6 {
 .sidebar {
 	position: fixed;
 	right:0;
-	top:230px;
+	top:150px;
 	bottom:0;
 	overflow: auto;
 }
-.overview {
-}
 .rightalign {
 	text-align: right;
-}
-.logo {
-	width: 60px;
-	height: 60px;
-	margin:0 auto;
-	display: inline-block;
-	text-indent: -9999px;
-	/*margin-top: 10px;*/
-	margin-right: 10px;
 }
 .header {
 	text-align:center;
 	margin-top: 10px;	
 }
-.dollar {
-	background:url(../images/dollar1.svg) no-repeat top center;
-	background-size: contain;
+.icon.ion-veeva {
+	background-image: url(../images/veeva.png);;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 72px;
+	height: 72px;
+	margin: 0 auto;
 }
+.bigtext h2{ 
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-top: -8px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 40.063em) {
 	h1 {
@@ -185,177 +175,3 @@ h6 {
 }
 
 
-/* ############## !SVG ICONS ############## */
-
-.svg-image {
-	width: 50px;
-	height: 50px;
-	margin:0 auto;
-	display: block;
-	text-indent: -9999px;
-	margin-bottom: 10px;
-}
-.printidea {
-	background:url(../images/brochure2.svg) no-repeat top center;
-	background-size: contain;
-}
-.basic {
-	width: 60px;
-	height: 60px;
-	background:url(../images/page69.svg) no-repeat top center;
-	background-size: contain;
-}
-.advance {
-	width: 60px;
-	height: 60px;
-	background:url(../images/page68.svg) no-repeat top center;
-	background-size: contain;
-}
-.mix {
-	width: 60px;
-	height: 60px;
-	background:url(../images/minus45.svg) no-repeat top center;
-	background-size: contain;
-}
-.newidea {
-	width: 60px;
-	height: 60px;
-	background:url(../images/idea.svg) no-repeat top center;
-	background-size: contain;
-}
-.apple {
-	background:url(../images/apple19.svg) no-repeat top center;
-	background-size: contain;
-}
-.irep {
-	background:url(../images/html2.svg) no-repeat top center;
-	background-size: contain;
-}
-.android {
-	background:url(../images/android3.svg) no-repeat top center;
-	background-size: contain;
-}
-.android {
-	background:url(../images/android3.svg) no-repeat top center;
-	background-size: contain;
-}
-.customui {
-	background:url(../images/square81.svg) no-repeat top center;
-	background-size: contain;
-}
-.email {
-	background:url(../images/email7.svg) no-repeat top center;
-	background-size: contain;
-}
-.socialog {
-	background:url(../images/facebook24.svg) no-repeat top center;
-	background-size: contain;
-}
-.pdf {
-	background:url(../images/pdf18.svg) no-repeat top center;
-	background-size: contain;
-}
-.userprofile {
-	background:url(../images/user74.svg) no-repeat top center;
-	background-size: contain;
-}
-.push {
-	background:url(../images/download21.svg) no-repeat top center;
-	background-size: contain;
-}
-.message {
-	background:url(../images/rectangular45.svg) no-repeat top center;
-	background-size: contain;
-}
-.share {
-	background:url(../images/share12.svg) no-repeat top center;
-	background-size: contain;
-}
-.armarker {
-	background:url(../images/focusing2.svg) no-repeat top center;
-	background-size: contain;
-}
-.qrcode {
-	background:url(../images/blackberry3.svg) no-repeat top center;
-	background-size: contain;
-}
-.drseg {
-	background:url(../images/man85.svg) no-repeat top center;
-	background-size: contain;
-}
-.t3dmod {
-	background:url(../images/cube18.svg) no-repeat top center;
-	background-size: contain;
-}
-.t3danim {
-	background:url(../images/3d62.svg) no-repeat top center;
-	background-size: contain;
-}
-.analytic {
-	background:url(../images/ascendant6.svg) no-repeat top center;
-	background-size: contain;
-}
-.maps {
-	background:url(../images/location27.svg) no-repeat top center;
-	background-size: contain;
-}
-.gallery {
-	background:url(../images/picture11.svg) no-repeat top center;
-	background-size: contain;
-}
-.maps {
-	background:url(../images/location27.svg) no-repeat top center;
-	background-size: contain;
-}
-.gallery {
-	background:url(../images/picture11.svg) no-repeat top center;
-	background-size: contain;
-}
-.audio {
-	background:url(../images/song1.svg) no-repeat top center;
-	background-size: contain;
-}
-.api {
-	background:url(../images/power25.svg) no-repeat top center;
-	background-size: contain;
-}
-.survey {
-	background:url(../images/verification5.svg) no-repeat top center;
-	background-size: contain;
-}
-.quiz {
-	background:url(../images/education31.svg) no-repeat top center;
-	background-size: contain;
-}
-.stencil {
-	background:url(../images/pencil11.svg) no-repeat top center;
-	background-size: contain;
-}
-.games {
-	background:url(../images/pac.svg) no-repeat top center;
-	background-size: contain;
-}
-.deploy {
-	background:url(../images/delivered.svg) no-repeat top center;
-	background-size: contain;
-}
-.usermg {
-	background:url(../images/multiple25.svg) no-repeat top center;
-	background-size: contain;
-}
-.datacoll {
-	background:url(../images/money.svg) no-repeat top center;
-	background-size: contain;
-}
-.cms {
-	background:url(../images/flow2.svg) no-repeat top center;
-	background-size: contain;
-}
-.sync {
-	background:url(../images/cloud130.svg) no-repeat top center;
-	background-size: contain;
-}
-.dashboard {
-	background:url(../images/seo1.svg) no-repeat top center;
-	background-size: contain;
-}

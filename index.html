@@ -21,7 +21,7 @@
 	<div class="row">
 		<div class="col-md-12">
 		  
-		<h1>Cost This</h1>
+		<h1>CostThis</h1>
 		<h4>Cost is for <strong>development</strong> only, excluding copywriting, creative concept, design and layout.</h4>
 		  <hr/>
 		</div>
@@ -30,9 +30,9 @@
 
 	
 
-	<div class="row pt">
+	<div class="row pt" style="margin:0;">
 		<!-- PROJECT TYPE -->
-		<div class="col-md-12">
+		<div class="col-md-8">
 			<h4>Project Type</h4>
 				<div class="row button-group">
 					<div ng-repeat="proj in project_type track by $index" class="col-md-4" ng-click="selected.project=$index; refreshCost();" ng-class="{'active':selected.project==$index}"><i class="icon {{proj.icon}}"></i> {{proj.title}} <span>{{proj.desc}}</span></div>
@@ -41,12 +41,10 @@
 	</div>
 
 
-	<div class="row">
+	<div class="row" style="margin:0;">
 		<!-- PLATFORM -->
 		<div class="col-md-8">
-			<h3>Size</h3>
 			  <h4>Choose the platform</h4>
-	  		  <!-- <h6>Select one</h6> -->
 	  		  <div class="row button-group">
 	  			  <div ng-repeat="plat in platform_type track by $index" class="col-md-4" ng-click="selected.platform=$index; refreshCost();" class="button" ng-class="{'active':selected.platform==$index}"><i class="icon {{plat.icon}}"></i> {{plat.title}}</div>
 	  		  </div>
@@ -66,17 +64,22 @@
 
 		<!-- SIZE -->
 		<div class="col-md-8">
-			<h3>Size</h3>
-			  <h4>Select the number of main screens: </h4>
-			  <h6>Main screen is one you see when you swipe (non-popup)</h6>
-			  {{numPages}}
-			  <slider ng-model="numPages" min="0" step="1" max="90" value="15" on-stop-slide="refreshCost();"></slider>
+			<!-- <h3>Size</h3> -->
+				<h4>Select the number of main screens: </h4>
+				<h6>Main screen is one you see when you swipe (non-popup)</h6>
+				<div class="row">
+						<div class="col-md-10"><slider ng-model="numPages" min="0" step="1" max="90" value="15" on-stop-slide="refreshCost();"></slider></div>
+						<div class="col-md-2 bigtext"><h2>{{numPages}}</h2></div>
+				</div>
+
 		</div>
 		<div class="col-md-8">
-			  <h4>Select the number of reference screens: </h4>
-			  <h6>Popup screens are References/Study Design</h6>
-			  {{numRefPages}}
-			  <slider ng-model="numRefPages" min="0" step="1" max="90" value="15" on-stop-slide="refreshCost();"></slider>
+				<h4>Select the number of reference screens: </h4>
+				<h6>Popup screens are References/Study Design</h6>
+				<div class="row">
+					<div class="col-md-10"><slider ng-model="numRefPages" min="0" step="1" max="90" value="15" on-stop-slide="refreshCost();"></slider></div>
+			  		<div class="col-md-2 bigtext"><h2>{{numRefPages}}</h2></div>
+		  		</div>
 		</div>
 
 		<!-- FEATURES -->
@@ -97,10 +100,8 @@
 
 		<!-- SIDEBAR -->
 		<div class="col-md-4 sidebar">
-		  <h4>Overview</h4>
-		  <div class="overview">
-			<div class="panel">
-				<!-- <h5><strong>Base cost</strong></h5> -->
+			<!--<div class="panel">
+				 <h5><strong>Base cost</strong></h5> -->
 				<!-- <div class="row" ng-repeat="item in basiccart">
 					<div class="col-md-8">{{item.desc}}</div>
 					<div class="col-md-4 rightalign">${{item.cost | number}}</div>
@@ -109,31 +110,24 @@
 				<!-- <div class="row" ng-repeat="item in featurecart">
 					<div class="col-md-8">{{item.desc}}</div>
 					<div class="col-md-4 rightalign">${{item.cost | number}}</div>
-				</div>   -->          
-		  </div>   
+				</div>          
+		  </div>   -->   
 			<div class="row">
-				<div class="col-md-8"><h6>Hours</h6></div>
-				<div class="col-md-4 rightalign"><h6>{{totalhours | number}}</h6></div>
+				<div class="col-md-8"><h4>Multiplier</h4></div>
+				<div class="col-md-4 rightalign"><h4>{{costmultiplier}}x</h4></div>
+			</div>  
+			<div class="row">
+				<div class="col-md-8"><h4>Total Hours</h4></div>
+				<div class="col-md-4 rightalign"><h4>{{totalhours | number:0}}</h4></div>
 			</div>
-			<!-- <div class="row">
-				<div class="col-md-8"><h6>Personnel</h6></div>
-				<div class="col-md-4 rightalign"><h6>{{ personnel }}</h6></div>
-			</div> -->
 		  <hr/> 
 			<div class="row">
-				<div class="col-md-8"><h4><strong>Total</strong></h4></div>
-				<div class="col-md-4 rightalign"><h4><strong>${{totalcost | number}}</strong></h4></div>
+				<div class="col-md-8"><h4><strong>Total Cost</strong></h4></div>
+				<div class="col-md-4 rightalign"><h4><strong>${{totalcost | number:2}}</strong></h4></div>
 			</div>
-		  
-
-			<hr/> 
-
-		  <div class="row">
-		  	<p class="col-md-12"><em><strong>Caveat:</strong> Cost are for estimates only. Use at your own discretion.</em></p>
-		  </div>
+			<hr/>
 
 
-		</div>
 		</div>
 
 	 </div>

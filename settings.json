@@ -8,15 +8,15 @@
 		],
 	"platforms":
 		[
-			{"type":"veeva", "title":"iRep/Veeva", "multiplier":1.2, "icon":"ion-monitor"},
-			{"type":"agnitio", "title":"Agnitio", 	"multiplier":1, "icon":"ion-medkit"},
-			{"type":"drive", "title":"Wax Drive", 	"multiplier":1.3, "icon":"ion-iphone"}
+			{"type":"veeva", "title":"iRep/Veeva", "multiplier":1.2, "icon":"ion-veeva"},
+			{"type":"agnitio", "title":"Agnitio", 	"multiplier":1, "icon":"ion-social-angular"},
+			{"type":"drive", "title":"Wax Drive", 	"multiplier":1.3, "icon":"ion-model-s"}
 		],
 	"features":[
-			{"title":"Reference PDF",			"multiplier":1.2, "icon":"ion-monitor" },
-			{"title":"CSS animation",			"multiplier":1.2, "icon":"ion-monitor" },
-			{"title":"Image optimisation",	"hours":2, "icon":"ion-monitor" },
-			{"title":"Deployment",				"hours":5, "icon":"ion-monitor" },
-			{"title":"Offline analytics",		"hours":5, "icon":"ion-monitor" }
+			{"title":"Reference PDF",			"multiplier":1.2, "icon":"ion-android-document" },
+			{"title":"CSS animation",			"multiplier":1.2, "icon":"ion-stats-bars" },
+			{"title":"Image optimisation",	"hours":2, "icon":"ion-images" },
+			{"title":"Deployment",				"hours":5, "icon":"ion-cube" },
+			{"title":"Offline analytics",		"hours":5, "icon":"ion-arrow-graph-up-right" }
 		]
 }

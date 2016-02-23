@@ -1,0 +1,22 @@
+{
+	"hourly_rate": 83,
+	"projects":
+		[
+			{"type":"eda", "title":"eDetailer", "desc":"Basic skeleton with reference popup & navigation.", "base_hours":10, "icon":"ion-medkit"},
+			{"type":"mobile", "title":"Mobile App", "desc":"", "base_hours":10, "icon":"ion-iphone"},
+			{"type":"web", "title":"Website", "desc":"", "base_hours":10, "icon":"ion-monitor"}
+		],
+	"platforms":
+		[
+			{"type":"veeva", "title":"iRep/Veeva", "multiplier":1.2, "icon":"ion-monitor"},
+			{"type":"agnitio", "title":"Agnitio", 	"multiplier":1, "icon":"ion-medkit"},
+			{"type":"drive", "title":"Wax Drive", 	"multiplier":1.3, "icon":"ion-iphone"}
+		],
+	"features":[
+			{"title":"Reference PDF",			"multiplier":1.2, "icon":"ion-monitor" },
+			{"title":"CSS animation",			"multiplier":1.2, "icon":"ion-monitor" },
+			{"title":"Image optimisation",	"hours":2, "icon":"ion-monitor" },
+			{"title":"Deployment",				"hours":5, "icon":"ion-monitor" },
+			{"title":"Offline analytics",		"hours":5, "icon":"ion-monitor" }
+		]
+}

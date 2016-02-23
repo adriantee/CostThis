@@ -28,6 +28,8 @@ font-family: 'Ubuntu', sans-serif;
 html, body {
 	line-height: 1;
 	min-height:100%;
+	background:#333;
+	color:#fff;
 	/*height:100%;*/
 	font-family:Arial, Verdana, sans-serif;
 }
@@ -67,40 +69,47 @@ body {
 	/*background: #0058B2;*/
 }
 h1, h4 {
-	color: #bc3233;
+	/*color: #bc3233;*/
 }
 h6 {
-	color: #869499;
+	/*color: #869499;*/
 }
 /* ############## !LAYOUT ############## */
 
-.sectionContent {
-	width:100%;
-	z-index: 100;
-	position: absolute;
-	text-align: center;
-	overflow:hidden;
-}
-.innerSection {
-	width:100%;
-	margin:0 auto;
-	position: relative;
-}
 
 
-
-
-
-.button {
+/* button */
+.button-group .col-md-3,
+.button-group .col-md-4 {
 	transition:none;
 	background: #aaa;
 	width: 150px;
 	height: 150px;
+	padding:20px 0;
+	cursor: pointer;
+	text-align: center;
+	font-size: 16px;
 }
-.button:hover {
+.pt .button-group .col-md-4 {
+	padding:10px 0;
+}
+.button-group .col-md-3 span,
+.button-group .col-md-4 span {
+	font-size: 12px;
+	color:#eee;
+	display: block;
+}
+.button-group .col-md-3 .icon,
+.button-group .col-md-4 .icon{
+	font-size: 70px;
+	display: block;
+}
+.button-group .col-md-3:hover,
+.button-group .col-md-4:hover {
 	transition:none;
 }
-.button.active {
+.button-group .col-md-3.active,
+.button-group .col-md-4.active {
 	background-color:#008cba;
 }
 .button-group .large-3.columns {
@@ -109,9 +118,7 @@ h6 {
 .sidebar .row {
 	margin-bottom: 0.4em;
 }
-.button.large {
-	width: 300px;
-}
+
 /* ############## !STYLES ############## */
 
 .sidebar {
